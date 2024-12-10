@@ -49,7 +49,7 @@ section#login > div#imagem {
     background: #5f2c82 url(../imagens/pexels-eosvini-2896034.jpg);
     height: 200px;
     background-size: cover;
-    background-position:right bottom ;
+    background-position:center bottom ;
 }
 
 section#login > div#formulario {
@@ -58,6 +58,11 @@ section#login > div#formulario {
 
 }
 
-@media screen and (min-width: 768) {
-    
+div#formulario > h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#formulario > p {
+    font-size: 0.8em;
 }
