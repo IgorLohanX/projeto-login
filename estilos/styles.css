@@ -28,18 +28,18 @@ main {
 
 section#login {
     position: absolute;
+    background-color: white;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     
     overflow: hidden;  /* tudo que esta fora da borda, fica escondido */
-
-    background-color: white;
+    
     width: 250px;
     height: 515px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.452);
-
+    
+    transform: translate(-50%, -50%);
     transition: width 0.3s, height 0.3s;  /* transiçao da mudança de uma query pra outra */
     transition-timing-function: ease; /* transiçao suave durante a animação */
 }
@@ -65,14 +65,16 @@ div#formulario > h1 {
 
 div#formulario > p {
     font-size: 0.8em;
+    margin: 20px 0px;
 }
 
 form > div.campo {
     background-color: #5f2c82;
+    border:2px solid #5f2c82;
     display: block;
     width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px
 }
 
@@ -80,12 +82,35 @@ div.campo > label {
     display: none;
 }
 
+div.campo > span {
+    color: white; /* colorindo o icone */
+    /* background-color: black; */
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: #94cfcd;
+    font-size: 1em;
+    width: calc(100% - 45px); /* calculo para encaixe do input */
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-13px); /* Sempre fazer o uso do transf ou coisas do tipo como ultima prioridade nas config */
+}
+
+div.campo > input:focus-within /* foco quando estiver digitando, ex: cliquei e comecei a digitar e o fundo mudou de cor */ {
+    background-color: white;
+}
+
 form > input[type=submit] {
     display: block;
     font-size: 1em;
     width: 100%; /* ocupa 100% do container, tem diferença do uso do 100vw */
     height: 40px;
-    background-color: #49a09d;
+    background-color: #53aaa7;
     color: white;
     border: none;
     border-radius: 5px;
@@ -99,6 +124,7 @@ form > input[type=submit]:hover {
 form > a.botao {
     display: block;
     text-align: center;
+    text-decoration: none;
     font-size: 1em;
     width: 100%;
     height: 40px;
@@ -108,7 +134,6 @@ form > a.botao {
     color: #2d6462;
     border: 1px solid #49a09d;
     border-radius: 7px;
-    text-decoration: none;
 }
 
 form > a.botao:hover {
